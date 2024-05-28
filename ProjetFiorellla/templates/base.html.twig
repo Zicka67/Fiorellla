@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {# <script src="/tarteaucitron/tarteaucitron.js"></script>
+        <script src="{{ asset('js/tarteAuCitron.js') }}"></script> #}
+
+        <meta charset="UTF-8">
+
+        {% block metaDescription %}
+        <meta name="description" content=" ">
+        {% endblock %}
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{% block title %}Bienvenue{% endblock %}</title>
+        {# <link rel="icon" href="{{ asset('img/') }}"> #}
+        
+        
+        {# CSS #}
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        {# FONTS #}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Great+Vibes&display=swap" rel="stylesheet">
+        {# SCRIPT #}
+        
+        {% block stylesheets %}
+        {% endblock %}
+
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            {% include "_partials/_nav.html.twig" %}
+
+            {% block body %}{% endblock %}
+
+            {% include "_partials/_footer.html.twig" %}
+
+        </div>
+
+
+        {% block javascripts %}
+        {# {% block importmap %}{{ importmap('app') }}{% endblock %} #}
+        {% endblock %}
+
+    </body>
+</html>
